@@ -3,22 +3,22 @@ package com.easymoney.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Getter
-@Setter@Entity
-@Table(name="order")
+@Setter
+@Entity
+@Table(name="orders")
 public class Order {
 
     @Id
-    @GeneratedValue
-    private long orderId;
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private long id;
+    @OneToOne
     private Coin coin;
     private long dateExpect;
-    private double tilValueCoin;
-    private double tilQtyCoin;
+    private BigDecimal tilValueCoin;
+    private BigDecimal tilQtyCoin;
 
 }
