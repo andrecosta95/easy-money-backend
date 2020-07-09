@@ -1,5 +1,7 @@
 package com.easymoney;
 
+import com.easymoney.model.Address;
+import com.easymoney.model.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -15,7 +15,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order save(Order order) {
-         return repository.save(order);
+        return repository.save(order);
     }
 
     @Override
@@ -31,5 +31,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Order> findAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public Optional<Order> editById(Long id) {
+        return Optional.empty();
     }
 }

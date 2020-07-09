@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface OrderService {
 
     /**
-     * Method that save a order service.
+     * Method that create a order service.
      *
      * @author André Costa
      * @since 28/06/2020
@@ -50,5 +50,16 @@ public interface OrderService {
      * @return <code>List<Order></code> object
      */
     List<Order> findAll();
+
+    /**
+     * Method that edit a order by an id.
+     *
+     * @author André Costa
+     * @since 04/07/2020
+     *
+     * @param id
+     * @return <code>Optional<Order></code> object
+     */
+    Optional<Order> editById(Long id);
 
 }

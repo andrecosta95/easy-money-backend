@@ -15,9 +15,10 @@ public class Profile {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String login;
     private String passWord;
-    private long lastAccess;
+    private Long lastAccess;
+    private String accessLevel;
 
 }
